@@ -31,13 +31,15 @@ function draw() {
   if (!paused) {update();}
   else {text("Paused", 350, 10);}
 
-  playerX = clamp(playerX, 0, 370);
-  playerY = clamp(playerY, 0, 370);
+  playerX = clamp(playerX, 15, 385);
+  playerY = clamp(playerY, 15, 385);
 
-  rect(playerX, playerY, 30, 30);
+  //rect(playerX, playerY, 30, 30);
+  ellipse(playerX, playerY, 30);
 
   fill(252, 227, 3);
-  rect(coinX, coinY, 20, 20);
+  //rect(coinX, coinY, 20, 20);
+  ellipse(coinX, coinY, 20);
 
   fill(255, 255, 255);
   text("Coins: " + coins, 5, 10);
@@ -78,7 +80,7 @@ function update() {
     playerX += playerSpeed * deltaTime;
   }
 
-  if (isColliding(playerX, playerY, 30, 30, coinX, coinY, 20, 20)) {
+  if (isColliding(playerX, playerY, 15, coinX, coinY, 10)) {
     coins += 1;
     coinX = random(0, 370);
     coinY = random(0, 370);
@@ -86,10 +88,14 @@ function update() {
 }
 
 
-function isColliding(x1, y1, w1, h1, x2, y2, w2, h2){
-  if((x1 > x2) && (x1 < x2 + w2) && (y1 > y2) && (y1 < y2 + h2)){
+function isColliding(x1, y1, r1, x2, y2, r2) {
+  d = dist(x1, y1, x2, y2);
+  alert("E");
+
+  if (dist < r1 + r2) {
     return true;
-  } else {
+  }
+  else {
     return false;
   }
 }

@@ -1,6 +1,6 @@
 var playerX = 185;
 var playerY = 185;
-var playerSpeed = 0.5;
+var playerSpeed = 0.3;
 
 var paused = false;
 
@@ -18,6 +18,9 @@ const KEY_ESCAPE = 27;
 function setup() {
   createCanvas(400, 400);
   frameRate(60)
+
+  coinX = random(0, 370);
+  coinY = random(0, 370);
 }
 
 function draw() {
@@ -74,11 +77,17 @@ function update() {
   if (keyIsDown(KEY_D) || keyIsDown(RIGHT_ARROW)) {
     playerX += playerSpeed * deltaTime;
   }
+
+  if (isColliding(playerX, playerY, 30, 30, coinX, coinY, 20, 20)) {
+    coins += 1;
+    coinX = random(0, 370);
+    coinY = random(0, 370);
+  }
 }
 
 
 function isColliding(x1, y1, w1, h1, x2, y2, w2, h2){
-  if(x1 > x2 && x1 < x2+w2 && y1 > y2 && y1 < y2 + h2){
+  if((x1 > x2) && (x1 < x2 + w2) && (y1 > y2) && (y1 < y2 + h2)){
     return true;
   } else {
     return false;

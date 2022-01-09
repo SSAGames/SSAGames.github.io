@@ -32,6 +32,3 @@ function draw() {
 
   rect(playerX, playerY, 30, 30)
 }
-
-function keyIsPressed() {
-}

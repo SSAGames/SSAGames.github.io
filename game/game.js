@@ -17,16 +17,16 @@ function draw() {
 
   fill(255, 255, 255)
 
-  if (keyIsDown(KEY_W)) {
+  if (keyIsDown(KEY_W) || keyIsDown(UP_ARROW)) {
     playerY -= playerSpeed * deltaTime;
   }
-  if (keyIsDown(KEY_S)) {
+  if (keyIsDown(KEY_S) || keyIsDown(DOWN_ARROW)) {
     playerY += playerSpeed * deltaTime;
   }
-  if (keyIsDown(KEY_A)) {
+  if (keyIsDown(KEY_A) || keyIsDown(LEFT_ARROW)) {
     playerX -= playerSpeed * deltaTime;
   }
-  if (keyIsDown(KEY_D)) {
+  if (keyIsDown(KEY_D) || keyIsDown(RIGHT_ARROW)) {
     playerX += playerSpeed * deltaTime;
   }
 

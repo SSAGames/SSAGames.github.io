@@ -9,7 +9,7 @@ const KEY_D = 68;
 
 function setup() {
   createCanvas(400, 400);
-  frameRate(48)
+  frameRate(30)
 }
 
 function draw() {

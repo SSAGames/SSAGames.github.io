@@ -5,13 +5,19 @@
 
 h1 {
   color: #00db80;
-  background-color: #1f1f1f;
   font-family: RobotoCondensed;
+  font-size: 60px;
 }
 
 body {
   background-color: #1f1f1f;
   text-align: center;
+}
+
+texts {
+  color: white;
+  font-family: RobotoCondensed;
+  font-size: 30px;
 }
 
 p1 {

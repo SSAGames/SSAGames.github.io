@@ -1,11 +1,16 @@
 @font-face {
-  font-family: RobotoCondensed;
+  font-family: RCLight;
   src: url('RobotoCondensed/RobotoCondensed-Light.ttf')
+}
+
+@font-face {
+  font-family: RCRegular;
+  src: url('RobotoCondensed/RobotoCondensed-Regular.ttf')
 }
 
 h1 {
   color: #00db80;
-  font-family: RobotoCondensed;
+  font-family: RCLight;
   font-size: 60px;
 }
 
@@ -16,6 +21,28 @@ body {
 
 texts {
   color: white;
-  font-family: RobotoCondensed;
+  font-family: RCLight;
   font-size: 30px;
+}
+
+
+.button {
+  background-color: #00db80;
+  color: #1f1f1f;
+  padding: 20px 30px;
+  font-family: RCRegular;
+  font-size: 30px;
+}
+
+
+.game {
+  position: relative;
+  top: 0px;
+}
+
+
+omthegg {
+  position: absolute;
+  top: 700px;
+  left: 320px;
 }

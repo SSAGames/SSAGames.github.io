@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Roboto+Condensed:wght@300&display=swap');
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Roboto+Condensed:wght@300&display=swap')
+}
+
 h1 {
-  color: Green;
+  color: #1AF000;
+  background-color: #434343;
+  font-family: RobotoCondensed;
+}
+
+body {
+  background-color: #434343;
 }

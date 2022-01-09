@@ -29,9 +29,9 @@ texts {
 .button {
   background-color: #00db80;
   color: #1f1f1f;
-  padding: 20px 30px;
+  padding: 10px 20px;
   font-family: RCRegular;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 
@@ -45,4 +45,10 @@ us {
   position: relative;
   top: 500px;
   left: 0px;
+}
+
+
+bar {
+  position: relative;
+  top: -25px;
 }

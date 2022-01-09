@@ -4,6 +4,11 @@ var playerSpeed = 0.5;
 
 var paused = false;
 
+var coinX = 0;
+var coinY = 0;
+
+var coins = 0;
+
 const KEY_W = 87;
 const KEY_S = 83;
 const KEY_A = 65;
@@ -21,12 +26,18 @@ function draw() {
   fill(255, 255, 255)
 
   if (!paused) {update();}
-  else {text("Paused", 10, 10);}
+  else {text("Paused", 350, 10);}
 
   playerX = clamp(playerX, 0, 370);
   playerY = clamp(playerY, 0, 370);
 
-  rect(playerX, playerY, 30, 30)
+  rect(playerX, playerY, 30, 30);
+
+  fill(252, 227, 3);
+  rect(coinX, coinY, 20, 20);
+
+  fill(255, 255, 255);
+  text("Coins: " + coins, 5, 10);
 }
 
 
@@ -62,5 +73,14 @@ function update() {
   }
   if (keyIsDown(KEY_D) || keyIsDown(RIGHT_ARROW)) {
     playerX += playerSpeed * deltaTime;
+  }
+}
+
+
+function isColliding(x1, y1, w1, h1, x2, y2, w2, h2){
+  if(x1 > x2 && x1 < x2+w2 && y1 > y2 && y1 < y2 + h2){
+    return true;
+  } else {
+    return false;
   }
 }

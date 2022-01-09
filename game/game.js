@@ -1,6 +1,11 @@
 var playerX = 185
 var playerY = 185
-var playerSpeed = 100
+var playerSpeed = 1
+
+const KEY_W = 87;
+const KEY_S = 83;
+const KEY_A = 65;
+const KEY_D = 68;
 
 function setup() {
   createCanvas(400, 400);
@@ -15,8 +20,16 @@ function draw() {
 }
 
 function keyPressed() {
-  if (keyCode == W) {
+  if (keyCode == KEY_W) {
     playerY -= playerSpeed * deltaTime;
-    alert("Key w pressed")
+  }
+  if (keyCode == KEY_S) {
+    playerY += playerSpeed * deltaTime;
+  }
+  if (keyCode == KEY_A) {
+    playerX -= playerSpeed * deltaTime;
+  }
+  if (keyCode == KEY_D) {
+    playerX += playerSpeed * deltaTime;
   }
 }

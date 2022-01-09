@@ -30,5 +30,22 @@ function draw() {
     playerX += playerSpeed * deltaTime;
   }
 
+  playerX = clamp(playerX, 0, 370);
+  playerY = clamp(playerY, 0, 370);
+
   rect(playerX, playerY, 30, 30)
+}
+
+function clamp(value, min, max) {
+  var clamped
+  if (value < min) {
+    clamped = min;
+  }
+  else if (value > max) {
+    clamped = max;
+  }
+  else {
+    clamped = value;
+  }
+  return clamped;
 }

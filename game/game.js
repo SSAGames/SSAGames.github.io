@@ -1,5 +1,5 @@
-var playerX = 185; // The position of the player on the X axis
-var playerY = 185; // The position of the player on the Y axis
+var playerX = 195; // The position of the player on the X axis
+var playerY = 195; // The position of the player on the Y axis
 var playerSpeed = 0.25; // The movement speed of the player
 
 var paused = false;

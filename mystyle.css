@@ -9,7 +9,7 @@
 }
 
 h1 {
-  color: #00db80;
+  color: #00db80; /*#41f53b*/
   font-family: RCLight;
   font-size: 60px;
 }
@@ -27,7 +27,7 @@ texts {
 
 
 .button {
-  background-color: #00db80;
+  background-color: #00db80;/*#00db80*/
   color: #1f1f1f;
   padding: 10px 20px;
   font-family: RCRegular;

@@ -29,7 +29,7 @@ texts {
 .button {
   background-color: #00db80;/*#00db80*/
   color: #1f1f1f;
-  padding: 10px 20px;
+  padding: 12px 22px;
   font-family: RCRegular;
   font-size: 25px;
   border-radius: 4px;
@@ -64,4 +64,14 @@ p {
   color: white;
   font-family: RCLight;
   font-size: 20px;
+}
+
+
+.bar-button {
+  border-radius: 0px;
+  font-size: 20px;
+  padding: 9px 20px;
+  margin-left: -1px;
+  margin-right: -1px;
+  border-radius: 3px;
 }
